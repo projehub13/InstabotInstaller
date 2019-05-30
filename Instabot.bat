@@ -4,6 +4,7 @@ cd utils
 IF EXIST "downloaded.dat" (
     IF EXIST "installed.dat" (
         cd ..
+        set PATH=C:\Program Files\Python37\;C:\Program Files\Python37\Scripts
         start "" InstagramBot.jar
     ) ELSE (
         start /w jre-8u211-windows-i586.exe /s INSTALLDIR=%userprofile%\AppData\Local\Programs\java\jre1.8.2
