@@ -1,5 +1,10 @@
 # Instabot Installer
 
+## Necessary Infos
+
+- Python Path: `C:\Program Files\Python37`
+- Java Path: `%userprofile%\AppData\Local\Programs\java\jre1.8.2`
+
 ## Java Kurulumu
 
 - Cmd'yi açık tutmak içim `start /w jre-7-windows-i586.exe /s`
