@@ -13,7 +13,9 @@ IF EXIST "downloaded.dat" (
         set JRE_HOME=%userprofile%\AppData\Local\Programs\java\jre1.8.2
         set PATH=%userprofile%\AppData\Local\Programs\Python\Python37
 
-        python "insta\setup.py" install
+        cd insta
+        python setup.py install
+        cd ..
         
         echo "Java 8u211 & Python 3.7.3" > installed.dat
         echo "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" > instalib\info.dat
