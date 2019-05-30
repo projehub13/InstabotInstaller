@@ -2,8 +2,14 @@
 
 ## Necessary Infos
 
-- Python Path: `C:\Program Files\Python37`
+- PythonPath: `"%userprofile%\AppData\Local\Programs\Python\Python37"`
 - Java Path: `%userprofile%\AppData\Local\Programs\java\jre1.8.2`
+
+### Utils içindeki dosyaların anlamları
+
+- `downloaded.dat` Python java setuplarının indirilmesii atlar
+- `installed.dat` Python, java yüklenmesini atlar
+- `module.dat` Python modüllerinin yüklenmesini atlar
 
 ## Java Kurulumu
 
