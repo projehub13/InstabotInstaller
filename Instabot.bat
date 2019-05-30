@@ -10,6 +10,8 @@ IF EXIST "utils/downloaded.dat" (
             "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" setup.py install
             cd ..
 
+            echo "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" > instalib\info.dat
+
             cd utils
             echo "Java 8u211 & Python 3.7.3" > module.dat
             
@@ -23,8 +25,7 @@ IF EXIST "utils/downloaded.dat" (
         python-3.7.3.exe InstallAllUsers=0 Include_launcher=0 Include_test=0 SimpleInstall=1 SimpleInstallDescription="Just for Instobot"
 
         echo "Java 8u211 & Python 3.7.3" > installed.dat
-        echo "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" > instalib\info.dat
-        
+                
         cd ..
         Instabot.bat
     )
