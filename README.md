@@ -6,6 +6,8 @@
 - PythonPath: `"%userprofile%\AppData\Local\Programs\Python\Python37"`
 - Java Path: `%userprofile%\AppData\Local\Programs\java\jre1.8.2`
 
+> `%userprofile%` = C:\Users\can
+
 ### Utils içindeki dosyaların anlamları
 
 - `downloaded.dat` Python java setuplarının indirilmesii atlar
