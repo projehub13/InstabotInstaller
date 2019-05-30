@@ -4,7 +4,6 @@ cd utils
 IF EXIST "downloaded.dat" (
     IF EXIST "installed.dat" (
         cd ..
-        set PATH=C:\Program Files\Python37\;C:\Program Files\Python37\Scripts
         start "" InstagramBot.jar
     ) ELSE (
         start /w jre-8u211-windows-i586.exe /s INSTALLDIR=%userprofile%\AppData\Local\Programs\java\jre1.8.2
@@ -12,12 +11,13 @@ IF EXIST "downloaded.dat" (
         python-3.7.3.exe InstallAllUsers=0 Include_launcher=0 Include_test=0 SimpleInstall=1 SimpleInstallDescription="Just for Instobot 🤖"
 
         set JRE_HOME=%userprofile%\AppData\Local\Programs\java\jre1.8.2
-        set PATH=C:\Program Files\Python37\;C:\Program Files\Python37\Scripts
+        set PATH=%userprofile%\AppData\Local\Programs\Python\Python37
 
         python "insta\setup.py" install
-
+        
         echo "Java 8u211 & Python 3.7.3" > installed.dat
-
+        echo "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" > instalib\info.dat
+        
         cd ..
         Instabot.bat
     )
