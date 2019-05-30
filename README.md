@@ -2,6 +2,7 @@
 
 ## Necessary Infos
 
+- Python.exe Yolu: `%userprofile%\AppData\Local\Programs\Python\Python37\python.exe`
 - PythonPath: `"%userprofile%\AppData\Local\Programs\Python\Python37"`
 - Java Path: `%userprofile%\AppData\Local\Programs\java\jre1.8.2`
 
