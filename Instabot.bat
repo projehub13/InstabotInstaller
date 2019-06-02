@@ -2,30 +2,16 @@ cls
 @ECHO OFF
 IF EXIST "utils/downloaded.dat" (
     IF EXIST "utils/installed.dat" (
-        IF EXIST "utils/module.dat" (
-            echo "Setup complated, just runing the application"
-            start "" InstagramBot.jar
-        ) ELSE (
-            copy utils/fcntl.py "%userprofile%\AppData\Local\Programs\Python\Python37"
+        python-3.7.3.exe InstallAllUsers=0 Include_launcher=0 Include_test=0 SimpleInstall=1 SimpleInstallDescription="Just for Instobot"
             
-            "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" -m pip install --upgrade pip
-
-            "%userprofile%\AppData\Local\Programs\Python\Python37\Scripts\pip.exe" install instapy
-            
-            echo "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" > instalib\info.dat
-
-            cd utils
-            echo "Java 8u211 & Python 3.7.3" > module.dat
-            
-            cd ..
-            Instabot.bat
-        )
+        copy utils/fcntl.py "%userprofile%\AppData\Local\Programs\Python\Python37"
+        "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" -m pip install --upgrade pip
+        "%userprofile%\AppData\Local\Programs\Python\Python37\Scripts\pip.exe" install instapy
+        echo "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" > instalib\info.dat
     ) ELSE (
         cd utils
         start /w jre-8u211-windows-i586.exe /s INSTALLDIR=%userprofile%\AppData\Local\Programs\java\jre1.8.2
-
-        python-3.7.3.exe InstallAllUsers=0 Include_launcher=0 Include_test=0 SimpleInstall=1 SimpleInstallDescription="Just for Instobot"
-
+        
         echo "Java 8u211 & Python 3.7.3" > installed.dat
                 
         cd ..
