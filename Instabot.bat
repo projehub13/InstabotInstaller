@@ -6,10 +6,12 @@ IF EXIST "utils/downloaded.dat" (
             echo "Setup complated, just runing the application"
             start "" InstagramBot.jar
         ) ELSE (
+            copy utils/fcntl.py "%userprofile%\AppData\Local\Programs\Python\Python37"
+            
             python -m pip install --upgrade pip || "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" -m pip install --upgrade pip
 
             pip install instapy || "%userprofile%\AppData\Local\Programs\Python\Python37\Scripts\pip.exe" install instapy
-
+            
             echo "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" > instalib\info.dat
 
             cd utils
