@@ -6,9 +6,7 @@ IF EXIST "utils/downloaded.dat" (
             echo "Setup complated, just runing the application"
             start "" InstagramBot.jar
         ) ELSE (
-            cd insta
-            "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" setup.py install
-            cd ..
+            "%userprofile%\AppData\Local\Programs\Python\Python37\Scripts\pip.exe" install instapy
 
             echo "%userprofile%\AppData\Local\Programs\Python\Python37\python.exe" > instalib\info.dat
 
